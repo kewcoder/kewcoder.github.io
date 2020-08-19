@@ -1,0 +1,122 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root{
+    --color-primary_light: #A3BFFA;
+    --color-primary: #667EEA;
+    --color-primary_dark: #4C51BF;
+}
+
+.theme-light {
+    --theme-primary_light: #fff;
+    --theme-primary: #EDF2F7;
+    --theme-primary_dark: #dbe5ef;
+
+    --theme-secondary: #718096;
+
+    background: var(--theme-primary);
+    color: var(--theme-secondary);
+}
+
+.theme-dark {
+    --theme-primary_light: #1b1f2c;
+    --theme-primary: #11141c;
+    --theme-primary_dark: #0a0d0f;
+    --theme-secondary: #dbe5ef;
+
+    background: var(--theme-primary);
+    color: var(--theme-secondary);
+}
+.theme-dark-blue {
+    --theme-primary_light: 	#192734;
+    --theme-primary:  #15202b;
+    --theme-primary_dark: #101922;
+    --theme-secondary: #dbe5ef;
+    
+    background: var(--theme-primary);
+    color: var(--theme-secondary);
+}
+
+
+/* Primary Color */
+/* Red */
+.primary-red{
+    --color-primary_light: #FEB2B2;
+    --color-primary: #F56565;
+    --color-primary_dark: #C53030
+}
+/* Orange */
+.primary-orange{
+    --color-primary_light: #FBD38D;
+    --color-primary: #ED8936;
+    --color-primary_dark: #C05621;
+}
+
+
+/* Yellow */
+.primary-yellow{
+    --color-primary_light: #FAF089;
+    --color-primary: #ECC94B;
+    --color-primary_dark: #B7791F;
+}
+
+/* Green */
+.primary-green{
+    --color-primary_light: #9AE6B4;
+    --color-primary: #48BB78;
+    --color-primary_dark: #2F855A
+}
+
+/* Teal */
+.primary-teal{
+    --color-primary_light: #81E6D9;
+    --color-primary: #38B2AC;
+    --color-primary_dark: #2C7A7B
+}
+/* Blue */
+.primary-blue{
+    --color-primary_light: #90CDF4;
+    --color-primary: #4299E1;
+    --color-primary_dark: #2B6CB0;
+}
+
+/* Indigo */
+.primary-indigo{
+    --color-primary_light: #A3BFFA;
+    --color-primary: #667EEA;
+    --color-primary_dark: #4C51BF;
+}
+
+/* Purple */
+.primary-purple{
+    --color-primary_light: #7f6be6;
+    --color-primary: #6534ff;
+    --color-primary_dark: #5021eb;
+}
+/* Pink */
+.primary-pink{
+    --color-primary_light: #FBB6CE;
+    --color-primary: #ED64A6;
+    --color-primary_dark: #B83280;
+}
+
+button:focus,input:focus,select:focus,textarea:focus{
+    outline-style: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+.slide-fade-enter-active {
+transition: all .2s ease;
+}
+.slide-fade-leave-active {
+transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to{
+opacity: .5;
+}
