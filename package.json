@@ -7,8 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "export": "nuxt export",
-    "serve": "nuxt serve",
-    "generate": "nuxt generate"
+    "serve": "nuxt serve"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.1",
