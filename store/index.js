@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-        settings: true,
+        settings: false,
         theme: localStorage.getItem("theme") || 'theme-light',
         primaryColor: localStorage.getItem("primary-color") || 'primary-indigo',
         loading: false,

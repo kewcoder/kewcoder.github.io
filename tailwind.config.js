@@ -7,11 +7,6 @@
 module.exports = {
   theme: {
       extend: {
-          theme: {
-              fontFamily: {
-                'sans': ['-apple-system', 'BlinkMacSystemFont']
-              }
-          },
           colors: {
               theme_primary_light: 'var(--theme-primary_light)',
               theme_primary: 'var(--theme-primary)',
