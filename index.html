@@ -3,30 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hai Ari Bahtiar</title>
-    <meta name="description" content="Hai saya Ari Bahtiar | Web Developer Indonesia | Ini portfolio saya">
+    <title>Kew Coder | Personal Portfolio Website </title>
+    <meta name="description" content="Kew Coder | Personal Portfolio Website">
     <meta name=”robots” content="index, follow">
-    <link rel="stylesheet" href="/aristyle.css">
+    <link rel="stylesheet" href="/assets/css/aristyle.css">
+    <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"> 
 </head>
 <body>
-    
-    <nav>
-        <a href="/cv-ari-bahtiar.pdf" class="btn glass">Download CV</a>
-        <a href="/portfolio.html" class="btn glass">Portfolio</a>
-    </nav>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+<!-- Background -->
+<div class="bg-img" style="background-image: url(/assets/img/kewcoder.png);">
+</div>
+<main id="main" class="light">
+     <!-- About Me -->
+    <section>
+        <header class="navbar flex">
+            <a href="#" class="logo">Kew<span>Code.com</span></a>
+            <nav class="ml-auto navbar-right">
+                <a href="#">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#" class="btn-primary-sm ">Download CV</a>
+                <a onclick="toggleDarkMode()">
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="c bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                        <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
+                    </a>
+            </nav>
+        </header>
+        
+        <div class="about-me">
+            <div>
+                <h5>Hi I'am</h5>
+                <h1>Kew <span class="text-primary">Coder</span></h1>
+                <i style="font-size: .5em;">
+                    4 year experience
+                </i><br>
+                <p >
+                    Freelancer as 
+                    <span id="typed"></span>
+                </p>
+                
+                <a href="#" class="btn-primary">Contact Me</a>
+            </div>
+        </div>
+       
+        <footer class="flex nav-footer">
+            <nav>
+                <a href="https://github.com/kewcoder">@kewcoder</a>
+                <a href="https://dribbble.com/kewcoder">@kewcoder</a>
+                <a href="https://instagram.com/kewcoder">@kewcoder</a>
+            </nav>
+            <nav class="ml-auto">
+                <a href="#">Next page 2 .............</a>
+            </nav>
+        </footer> 
+    </section>
+    <!-- End About Me -->
+    <section >2</section>
+    <section >3</section>
+    <section >4</section>
+    <section >5</section>
+ </main>
+ <script src="/assets/js/typed.min.js"></script>
+ <script>
+    function toggleDarkMode(){
+        let el = document.getElementById('main');
+        if (el.className === 'light'){
+            el.className = 'dark';
+        } else {
+            el.className = 'light';
+        }
+    }
+    new Typed('#typed', {
+        strings: ['<strong><i>UI/UX Designer</i></strong>', '<strong><i>Web Developer</i></strong>','<strong><i>Mobile Developer</i></strong>'],
+        typeSpeed: 80,
+        backSpeed: 30,
+        cursorChar: '<strong>_</strong>',
+        shuffle: true,
+        smartBackspace: false,
+        loop: true
+    });
 
-    <main class="index glass">
-        <img class="avatar" src="/icon.png" alt="Ari Bahtiar">
-       <section>
-            <h1>Ari bahtiar</h1>
-            <small>Front-End Web Developer</small>
-       </section>
-
-        <a href="https://wa.me/6285157740850?text=Halo%20Ari%20.." class="btn glass">Contact Me</a>
-
-        <div class="glass circle circle-1"></div>
-        <div class="glass circle circle-2"></div>
-    </main>
-
+ </script>
 </body>
 </html>

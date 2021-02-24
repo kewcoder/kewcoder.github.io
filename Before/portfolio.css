@@ -5,7 +5,7 @@
     align-content: flex-start;
     overflow-y: scroll;
     padding-top: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     width: 100vw;
     height: auto;
 }
@@ -17,6 +17,7 @@
     border-radius: 15px;
     margin: 5px;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 .portfolio:hover{
     transform: scale(1.1);
