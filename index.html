@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="/assets/css/aristyle.css">
     <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"> 
 </head>
-<body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-<!-- Background -->
-<div class="bg-img" style="background-image: url(/assets/img/kewcoder.png);">
-</div>
-<main id="main" class="light">
+<body id="body" class="light">
+    <div class="bg-img" style="background-image: url(/assets/img/kewcoder.png);"></div>
+
+<main>
      <!-- About Me -->
     <section>
         <header class="navbar flex">
@@ -32,7 +29,7 @@
             </nav>
         </header>
         
-        <div class="about-me">
+        <div class="about-me ">
             <div>
                 <h5>Hi I'am</h5>
                 <h1>Kew <span class="text-primary">Coder</span></h1>
@@ -44,7 +41,7 @@
                     <span id="typed"></span>
                 </p>
                 
-                <a href="#" class="btn-primary">Contact Me</a>
+                <a href="#" class="btn-primary " data-tilt>Contact Me</a>
             </div>
         </div>
        
@@ -65,16 +62,23 @@
     <section >4</section>
     <section >5</section>
  </main>
- <script src="/assets/js/typed.min.js"></script>
+ <script type="text/javascript" src="/assets/js/typed.min.js"></script>
+ <script type="text/javascript" src="/assets/js/vanilla-tilt.min.js"></script>
  <script>
     function toggleDarkMode(){
-        let el = document.getElementById('main');
+        let el = document.getElementById('body');
         if (el.className === 'light'){
             el.className = 'dark';
         } else {
             el.className = 'light';
         }
     }
+
+    // bg img
+    VanillaTilt.init(document.querySelector(".bg-img"), {
+        scale: 1.2
+    });
+    
     new Typed('#typed', {
         strings: ['<strong><i>UI/UX Designer</i></strong>', '<strong><i>Web Developer</i></strong>','<strong><i>Mobile Developer</i></strong>'],
         typeSpeed: 80,
@@ -85,6 +89,8 @@
         loop: true
     });
 
+
+	
  </script>
 </body>
 </html>

@@ -6,10 +6,12 @@
 :root {
     font-family: sans-serif;
 }
+
 .light{
     --primary: #1e90ff;
-    --bg: #ffffff;
+    --bg: #CFCDFB;
     --color: #3C6071;
+    background: var(--bg);
     background-image: url(/assets/img/bg.svg);
     background-size: cover;
     color: var(--color);
@@ -19,20 +21,20 @@
 }
 .dark {
     --primary: #1e90ff;
-    --bg: #3C6071;
+    --bg: #4C7081;
+    background: var(--bg);
     background-image: url(/assets/img/bg-dark.svg);
     --color: #ffffff;
-    /* background: var(--bg); */
     color: var(--color);
 }
 
 .bg-img{
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     width: 600px;
     height: 600px;
-    z-index: 0;
+    z-index: 2;
     opacity: .8;
     background-size: cover;
 }
@@ -46,6 +48,7 @@ section{
     width: 100%;
     height: 100vh;
     position: relative;
+    z-index: 2
 }
 
 a{
@@ -69,6 +72,7 @@ a{
     display: flex;
     flex-wrap: wrap;
 }
+
 .ml-auto{
     margin-left: auto;
 }
