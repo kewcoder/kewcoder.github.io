@@ -42,7 +42,7 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .bg-profile-img {
     width: 400px;
     height: 400px;
@@ -93,7 +93,7 @@ header .navbar a:hover {
   color: var(--color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   header .navbar {
     display: none;
   }
@@ -102,6 +102,7 @@ header .navbar a:hover {
 section {
   width: 100vw;
   height: 100vh;
+  padding: 0 5vw;
   position: relative;
   z-index: 2;
   display: -webkit-box;
@@ -112,7 +113,6 @@ section {
 }
 
 .about-me {
-  padding-left: 5vw;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,7 +156,7 @@ section {
   opacity: .9;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .about-me .btn-action {
     padding: 10px 40px;
     font-size: 24px;
@@ -172,7 +172,8 @@ section {
   display: flex;
   position: absolute;
   bottom: 0;
-  left: 2vw;
+  left: 0;
+  padding-left: 2vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -192,7 +193,7 @@ section {
   margin: 0 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .about-me .sosmed a {
     padding: 10px;
   }
@@ -206,7 +207,7 @@ section {
   color: var(--color);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .about-me h1 {
     width: 100%;
     font-size: 6em;
@@ -242,7 +243,7 @@ section {
   color: var(--primary);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .btn-next-page span {
     display: none;
   }

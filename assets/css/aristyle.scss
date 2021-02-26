@@ -39,7 +39,7 @@
     opacity: .8;
     background-size: cover;
 
-    @media screen and (max-width:600px){
+    @media screen and (max-width:768px){
             width: 400px;
             height: 400px;
             opacity: .5;
@@ -78,7 +78,7 @@ header{
            color: var(--color);
         }
 
-        @media screen and (max-width:600px){
+        @media screen and (max-width:768px){
             display: none;
         }
     }
@@ -87,6 +87,7 @@ header{
 section{
     width: 100vw;
     height: 100vh;
+    padding: 0 5vw;
     position: relative;
     z-index: 2;
     display: flex;
@@ -94,7 +95,6 @@ section{
 }
 
 .about-me{
-    padding-left: 5vw;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -126,7 +126,7 @@ section{
         &:hover{
             opacity: .9;
         }
-        @media screen and (max-width:600px){
+        @media screen and (max-width:768px){
             padding: 10px 40px;
             font-size: 24px;
             border-radius: 50px;
@@ -138,7 +138,8 @@ section{
         display: flex;
         position: absolute;
         bottom: 0;
-        left: 2vw;
+        left: 0;
+        padding-left: 2vw;
         flex-wrap: wrap;
         & a{
             text-align: left;
@@ -150,7 +151,7 @@ section{
             & svg{
                 margin: 0 10px;
             }
-            @media screen and (max-width:600px){
+            @media screen and (max-width:768px){
                 padding: 10px;
                 & span {
                     display: none;
@@ -165,7 +166,7 @@ section{
 
     }
 
-    @media screen and (max-width:600px){
+    @media screen and (max-width:768px){
        & h1{
             width: 100%;
             font-size: 6em;
@@ -198,7 +199,7 @@ section{
         color: var(--primary);
     }
 
-    @media screen and (max-width:600px){
+    @media screen and (max-width:768px){
         & span{
             display: none;
         }
