@@ -1,135 +1,255 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: var(--color);
 }
+
 :root {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
-.light{
-    --primary: #1e90ff;
-    --bg: #CFCDFB;
-    --color: #3C6071;
-    background: var(--bg);
-    background-image: url(/assets/img/bg.svg);
-    background-size: cover;
-    color: var(--color);
-}
-.c{
-    color: var(--color);
-}
-.dark {
-    --primary: #1e90ff;
-    --bg: #4C7081;
-    background: var(--bg);
-    background-image: url(/assets/img/bg-dark.svg);
-    --color: #ffffff;
-    color: var(--color);
+.theme-light {
+  --primary: #1e90ff;
+  --bg: #CFCDFB;
+  --color: #3C6071;
+  background: var(--bg);
+  background-image: url(/assets/img/bg.svg);
+  background-size: cover;
+  color: var(--color);
 }
 
-.bg-img{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 600px;
-    height: 600px;
-    z-index: 2;
-    opacity: .8;
-    background-size: cover;
-}
-.text-primary{
-    color: var(--primary);
-}
-main{
-    padding:0 5vw;
-}
-section{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    z-index: 2
+.theme-dark {
+  --primary: #1e90ff;
+  --bg: #4C7081;
+  --color: #ffffff;
+  background: var(--bg);
+  background-image: url(/assets/img/bg-dark.svg);
+  background-size: cover;
+  color: var(--color);
 }
 
-a{
-    text-decoration: none;
-    color: var(--color);
+.bg-profile-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  z-index: 9;
+  opacity: .8;
+  background-size: cover;
 }
 
-@media screen and (max-width:600px){
-    .bg-img{
-        width: 400px;
-        height: 400px;
-        opacity: .5;
-    }
+@media screen and (max-width: 600px) {
+  .bg-profile-img {
+    width: 400px;
+    height: 400px;
+    opacity: .5;
+  }
 }
 
-/* All */
-
-  
-.flex{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+header {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: 30px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.ml-auto{
-    margin-left: auto;
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
 }
-.nav-footer{
-    position: absolute;
-    bottom: 5vh;
+
+header .logo span {
+  color: var(--primary);
 }
-@media screen and (max-width:600px){
-    
+
+header .navbar {
+  margin-left: auto;
 }
-/* End All */
-/* About Me */
-.about-me{
-    display: flex;
-    height: 80%;
-    align-items: center;
-    font-size: 3.5em;
+
+header .navbar a {
+  color: white;
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
 }
-.about-me p{
-    font-size: .7em;
+
+header .navbar a svg {
+  fill: white;
 }
-.logo{
+
+header .navbar a:hover {
+  background: var(--bg);
+  color: var(--color);
+}
+
+@media screen and (max-width: 600px) {
+  header .navbar {
+    display: none;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-me {
+  margin-left: 5vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 1;
+}
+
+.about-me h1 {
+  width: 100%;
+  font-size: 7em;
+}
+
+.about-me h1 span {
+  color: var(--primary);
+}
+
+.about-me h2 {
+  padding: 0 5px;
+  font-weight: 400;
+  width: 100%;
+  font-size: 3em;
+}
+
+.about-me .btn-action {
+  background: var(--primary);
+  color: white;
+  padding: 20px 60px;
+  font-size: 30px;
+  border-radius: 50px;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .about-me .btn-action {
+    padding: 10px 40px;
     font-size: 24px;
-    font-weight: bold;
+    border-radius: 50px;
+  }
 }
-.logo span{
+
+.about-me .sosmed {
+  width: 100%;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-me .sosmed a {
+  text-align: left;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.about-me .sosmed a svg {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .about-me .sosmed a {
+    padding: 10px;
+  }
+  .about-me .sosmed a span {
+    display: none;
+  }
+}
+
+.about-me .sosmed a:hover {
+  background: var(--bg);
+  color: var(--color);
+}
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    margin-top: 100px;
+  }
+  .about-me h1 {
+    width: 100%;
+    font-size: 6em;
+  }
+  .about-me h1 span {
     color: var(--primary);
+  }
+  .about-me h2 {
+    width: 100%;
+    font-weight: 400;
+    font-size: 2em;
+  }
 }
-.navbar{
-    padding-top: 5vh;
+
+.btn-next-page {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  bottom: 10px;
+  font-size: 1.5em;
+  padding: 30px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.navbar-right a{
-    color: white;
-    padding: 8px 12px;
+
+.btn-next-page svg {
+  margin: 0 12px;
 }
-.btn-primary{
-    background: var(--primary);
-    color: white;
-    padding: 12px 24px;
-    font-size: 24px;
-    border-radius: 30px;
+
+.btn-next-page:hover {
+  color: var(--primary);
 }
-.btn-primary-sm{
-    background: var(--primary);
-    color: white;
-    padding: 8px 12px;
-    font-size: 12px;
-    border-radius: 30px;
-}
-@media screen and (max-width:600px){
-    .bg-img{
-        width: 90vw;
-        opacity: .3;
-    }
-    .navbar-right{
-        display: none;
-    }
+
+@media screen and (max-width: 600px) {
+  .btn-next-page span {
+    display: none;
+  }
 }
 
 /* End About Me */
+/*# sourceMappingURL=aristyle.css.map */
