@@ -114,8 +114,17 @@ section{
         width: 100%;
         font-size: 3em;
     }
-
-
+    & .experience{
+        @media screen and (max-width:768px){
+            display: none;
+        }
+    }
+    & .experience-mobile{
+        display: none;
+        @media screen and (max-width:768px){
+            display: block;
+        }
+    }
     & .btn-action{
         background: var(--primary);
         color: white;

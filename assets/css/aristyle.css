@@ -143,6 +143,22 @@ section {
   font-size: 3em;
 }
 
+@media screen and (max-width: 768px) {
+  .about-me .experience {
+    display: none;
+  }
+}
+
+.about-me .experience-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me .experience-mobile {
+    display: block;
+  }
+}
+
 .about-me .btn-action {
   background: var(--primary);
   color: white;
