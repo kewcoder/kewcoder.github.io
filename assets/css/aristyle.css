@@ -16,9 +16,14 @@
   --bg: #CFCDFB;
   --color: #3C6071;
   background: var(--bg);
-  background-image: url(/assets/img/bg.svg);
-  background-size: cover;
   color: var(--color);
+}
+
+@media screen and (min-width: 769px) {
+  .theme-light {
+    background-image: url(/assets/img/bg.svg);
+    background-size: cover;
+  }
 }
 
 .theme-dark {
@@ -26,9 +31,14 @@
   --bg: #4C7081;
   --color: #ffffff;
   background: var(--bg);
-  background-image: url(/assets/img/bg-dark.svg);
-  background-size: cover;
   color: var(--color);
+}
+
+@media screen and (min-width: 769px) {
+  .theme-dark {
+    background-image: url(/assets/img/bg-dark.svg);
+    background-size: cover;
+  }
 }
 
 .bg-profile-img {
