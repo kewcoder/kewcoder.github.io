@@ -123,7 +123,9 @@ section{
         font-size: 30px;
         border-radius: 50px;
         margin: 30px 0;
-
+        &:hover{
+            opacity: .9;
+        }
         @media screen and (max-width:600px){
             padding: 10px 40px;
             font-size: 24px;
@@ -136,6 +138,7 @@ section{
         display: flex;
         position: absolute;
         bottom: 0;
+        left: 2vw;
         flex-wrap: wrap;
         & a{
             text-align: left;
@@ -163,12 +166,7 @@ section{
     }
 
     @media screen and (max-width:600px){
-
-        align-items: start;
-        align-content: start;
-        margin-top: 100px;
-
-        & h1{
+       & h1{
             width: 100%;
             font-size: 6em;
             & span {
