@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kew Coder | Personal Portfolio Website </title>
-    <meta name="description" content="Kew Coder | Personal Portfolio Website">
-    <meta name=”robots” content="index, follow">
-    <link rel="stylesheet" href="/assets/css/aristyle.css">
-    <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png"> 
-</head>
-<body id="body" class="theme-light">
-
-    <div class="bg-profile-img" style="background-image: url(/assets/img/kewcoder.png);"></div>
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kew Coder | Personal Portfolio Website</title>
+    <meta name="description" content="Kew Coder | Personal Portfolio Website" />
+    <meta name="”robots”" content="index, follow" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/aristyle.css"
+    />
+    <link rel="icon" href="/favicon.png" sizes="16x16" type="image/png" />
+  </head>
+  <body id="body" class="theme-light">
+    
+    <div
+      class="bg-profile-img"
+      style="
+        background-image: url(/assets/img/kewcoder.png);
+      "
+    ></div>
     <header>
         <a href="#" class="logo" data-tilt>Kew<span>Code.com</span></a>
         <nav class="navbar">
-            <!-- <a href="#" class="hide-m">Cource</a>
-            <a href="#" class="hide-m">Blog</a> -->
-            <a href="#" class="hide-m">#100DaysOfDesign</a>
-            <a href="#" class="hide-m">#100DaysOfCode</a>
+            <a href="#" class="hide-m">Course</a>
+            <a href="#" class="hide-m">Blog</a>
+            <a href="#" class="hide-m">Portfolio</a>
             <a onclick="toggleDarkMode()">
                 <svg  xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
                     <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
@@ -27,7 +33,7 @@
                 </a>
         </nav>
     </header>
-     <!-- About Me -->
+    <!-- About Me -->
     <section >
             <div class="about-me" id="aboutme">
                 <h2>Hi I'am</h2>
@@ -223,6 +229,8 @@ your School or Campus
             <div class="circle"></div>
         </a>
     </section>
+
+   
     <section class="latest-project" id="latestproject">
 
 
@@ -301,45 +309,50 @@ your School or Campus
         </a>
     </section>
 
+    <script
+      type="text/javascript"
+      src="/assets/js/typed.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/vanilla-tilt.min.js"
+    ></script>
+    <script>
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        // dark mode
+        let el = document.getElementById("body");
+        el.className = "theme-dark";
+      }
 
-
- <script type="text/javascript" src="/assets/js/typed.min.js"></script>
- <script type="text/javascript" src="/assets/js/vanilla-tilt.min.js"></script>
- <script>
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // dark mode
-    let el = document.getElementById('body');
-    el.className = 'theme-dark';
-
-
-}
-    function toggleDarkMode(){
-        let el = document.getElementById('body');
-        if (el.className === 'theme-light'){
-            el.className = 'theme-dark';
+      function toggleDarkMode() {
+        let el = document.getElementById("body");
+        if (el.className === "theme-light") {
+          el.className = "theme-dark";
         } else {
-            el.className = 'theme-light';
+          el.className = "theme-light";
         }
-    }
+      }
+      // bg img
+      VanillaTilt.init(document.querySelector(".bg-profile-img"), {
+        scale: 1.2,
+      });
 
-    // bg img
-    VanillaTilt.init(document.querySelector(".bg-profile-img"), {
-        scale: 1.2
-    });
-    
-    new Typed('#typed', {
-        strings: ['<strong><i>UI/UX Designer</i></strong>', '<strong><i>Web Developer</i></strong>','<strong><i>Mobile Developer</i></strong>'],
+      new Typed("#typed", {
+        strings: [
+          "<strong><i>UI/UX Designer</i></strong>",
+          "<strong><i>Web Developer</i></strong>",
+          "<strong><i>Mobile Developer</i></strong>",
+        ],
         typeSpeed: 80,
         backSpeed: 30,
-        cursorChar: '<strong>_</strong>',
+        cursorChar: "<strong>_</strong>",
         shuffle: true,
         smartBackspace: false,
-        loop: true
-    });
-
-    
-	
- </script>
-</body>
+        loop: true,
+      });
+    </script>
+  </body>
 </html>
