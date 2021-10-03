@@ -59,7 +59,8 @@ window.SiemaWithDots = class extends Siema {
 
 
 // instantiate new extended Siema
-const mySiemaWithDots = new SiemaWithDots({
+delete window.mySiemaWithDots
+window.mySiemaWithDots = new SiemaWithDots({
   easing: "cubic-bezier(0.76, 0, 0.24, 1)",
   duration: 500,
   // on init trigger method created above
