@@ -79,9 +79,9 @@ window.mySiemaWithDots = new SiemaWithDots({
 
 
 // Controls
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-const dots = document.querySelector(".dots");
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
+let dots = document.querySelector(".dots");
 
 if (mySiemaWithDots.innerElements.length === 1) {
   // Disable controls if only one slide
