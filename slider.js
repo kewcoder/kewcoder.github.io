@@ -85,9 +85,9 @@ var dots = document.querySelector(".dots");
 
 if (mySiemaWithDots.innerElements.length === 1) {
   // Disable controls if only one slide
-  prev.remove();
-  next.remove();
-  dots.remove();
+   prev.parentNode?.removeChild(prev)
+  next.parentNode?.removeChild(next)
+  dots.parentNode?.removeChild(dots)
 } else {
   prev.addEventListener("click", () => mySiemaWithDots.prev());
   next.addEventListener("click", () => mySiemaWithDots.next());
