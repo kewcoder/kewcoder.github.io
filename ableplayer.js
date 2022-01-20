@@ -40,16 +40,10 @@ var AblePlayerInstances = [];
 (function ($) {
 	$(document).ready(function () {
 
-		setTimeout(()=>{
-            console.log("video1 :", $("#video1"))
-            console.log("video & audio selector tag :", $('video, audio'))
-            $('video, audio').each(function (index, element) {
-                console.log("register able player : ", $(element).data('able-player'))
-                if ($(element).data('able-player') !== undefined) {
-                    AblePlayerInstances.push(new AblePlayer($(this),$(element)));
-                }
-            });
-        },1500)
+	setTimeout(()=>{
+             console.log("video1 :", $("#video1"))
+             AblePlayerInstances.push(new AblePlayer($("#video1")));	
+        },500)
 
 	});
 
