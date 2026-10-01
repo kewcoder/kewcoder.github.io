@@ -168,6 +168,22 @@ h3 {
 .logo span {
   color: var(--accent);
 }
+.nav__links {
+  display: flex;
+  gap: 28px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.nav__links a {
+  transition: color 0.2s;
+}
+.nav__links a:hover,
+.nav__links a.is-active {
+  color: var(--text);
+}
+.nav__links a.is-active {
+  font-weight: 500;
+}
 .nav__actions {
   display: flex;
   align-items: center;
@@ -363,46 +379,113 @@ h3 {
   font-weight: 500;
 }
 
-/* Work */
-.work {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.work__item {
+/* Experience */
+.timeline {
+  position: relative;
   margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--bg-elev);
-  box-shadow: var(--shadow);
+  padding: 0;
+  list-style: none;
 }
-.work__item img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top;
-  transition: transform 0.5s;
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 180px;
+  width: 2px;
+  background: var(--line);
 }
-.work__item:hover img {
-  transform: scale(1.04);
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0 48px;
+  padding-bottom: 40px;
 }
-.work__item figcaption {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  padding: 16px 20px;
-  border-top: 1px solid var(--line);
+.timeline__item:last-child {
+  padding-bottom: 0;
 }
-.work__item strong {
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 175px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--muted);
+}
+.timeline__item.is-current::before {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 6px var(--glow);
+}
+.timeline__date {
   font-family: var(--font-display);
   font-weight: 600;
-}
-.work__item span {
-  font-size: 13px;
   color: var(--muted);
-  text-align: right;
+  white-space: nowrap;
+}
+.is-current .timeline__date {
+  color: var(--accent);
+}
+.timeline__body h3 {
+  font-size: 22px;
+}
+.timeline__body p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+.timeline__body .timeline__org {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+.timeline__org a {
+  color: var(--accent);
+}
+.timeline__org a:hover {
+  text-decoration: underline;
+}
+.roles {
+  display: grid;
+  gap: 4px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid var(--line);
+}
+.roles li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0 16px;
+  padding: 8px 0 8px 18px;
+}
+.roles__date {
+  grid-row: span 2;
+  font-size: 14px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.roles strong {
+  font-weight: 600;
+}
+.roles span:not(.roles__date) {
+  grid-column: 2;
+  font-size: 15px;
+  color: var(--muted);
+}
+.roles .is-current {
+  margin-left: -2px;
+  border-left: 2px solid var(--accent);
+}
+.roles .is-current .roles__date {
+  color: var(--accent);
+}
+.timeline__body .tags {
+  margin-top: 14px;
 }
 
 /* Clients */
@@ -505,8 +588,7 @@ h3 {
     order: -1;
     width: min(240px, 60vw);
   }
-  .cards,
-  .work {
+  .cards {
     grid-template-columns: repeat(2, 1fr);
   }
   .clients {
@@ -514,18 +596,60 @@ h3 {
   }
 }
 @media (max-width: 640px) {
+  html {
+    scroll-padding-top: 112px;
+  }
+  .nav__inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 14px;
+  }
+  .nav__links {
+    order: 3;
+    width: 100%;
+    gap: 22px;
+    padding: 10px 0 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .nav__links::-webkit-scrollbar {
+    display: none;
+  }
   .hero {
     padding: 40px 0 64px;
   }
   .section {
     padding: 64px 0;
   }
-  .cards,
-  .work {
+  .cards {
     grid-template-columns: 1fr;
   }
   .card,
   .quote {
     padding: 24px;
+  }
+  .timeline::before {
+    left: 5px;
+  }
+  .timeline__item {
+    grid-template-columns: 1fr;
+    padding-left: 32px;
+  }
+  .timeline__item::before {
+    left: 0;
+  }
+  .roles li {
+    grid-template-columns: 1fr;
+  }
+  .roles__date {
+    grid-row: auto;
+  }
+  .roles span:not(.roles__date) {
+    grid-column: auto;
+  }
+  .timeline__date {
+    margin-bottom: 4px;
+    font-size: 14px;
   }
 }

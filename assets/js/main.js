@@ -50,4 +50,24 @@ if ("IntersectionObserver" in window) {
   reveals.forEach((el) => el.classList.add("is-visible"));
 }
 
+// Highlight the nav link for the section in view
+const links = document.querySelectorAll(".nav__links a");
+if ("IntersectionObserver" in window) {
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        links.forEach((a) =>
+          a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id)
+        );
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+  links.forEach((a) => {
+    const section = document.querySelector(a.getAttribute("href"));
+    if (section) spy.observe(section);
+  });
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
